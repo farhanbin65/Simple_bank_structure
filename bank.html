@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank inside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="tailwind.config.js" rel="stylesheet">
+   
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <head>
+        <h1 class="text-5xl text-center mt-10 mb-10">Lets get some 
+            <span class="font-bold text-violet-700">Mooooney</span>!!!</h1>
+    </head>
+    <main>
+        <button id="btn-home" class="mx-5 bg-yellow-500 text-white rounded-xl p-3 hover:bg-lime-600">home page</button>
+        <section>
+            <div class="grid grid-cols-3 gsp-4 w-9/12 mx-auto text-white gap-4 ">
+                <div class="bg-green-500 p-8 rounded-xl">
+                    <h1 class="text-2xl">Deposit</h1>
+                <h2 class="text-5xl">$ <span  id="deposit-total">00</span></h2>
+                </div>
+                <div class="bg-yellow-500 p-8 rounded-xl">
+                    <h1 class="text-2xl">Withdraw</h1>
+                <h2 class="text-5xl">$ <span id="withdraw-total">00</span></h2>
+                </div>
+                <div class="bg-violet-500 p-8 rounded-xl">
+                    <h1 class="text-2xl">Balance</h1>
+                <h2 class="text-5xl">$ <span id="balance-total">3100</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- deposit and withdraw -->
+        <section class="mt-12">
+          <div class="grid grid-cols-2 w-9/12 mx-auto gap-4 ">
+            <div class="bg-fuchsia-400 p-8 rounded-xl text-white">
+                <h1 class="text-2xl mb-4">Please Deposit</h1>
+            <input id="deposit-input" class="text-black mt-4 w-9/12 block m-2 px-2 rounded-md" type="email" placeholder="Enter Amount you want to Deposit">
+            <button id="btn-diposit" class=" bg-amber-400 m-2 rounded-lg px-6 py-2 font-medium hover:bg-green-400">Submit</button>
+     
+          </div>
+            <div class="bg-indigo-300 p-8 rounded-xl text-white ">
+                <h1 class="text-2xl">Please Withdraw</h1>
+            <input id="withdraw-input" class="text-black mt-4 w-9/12 block m-2 px-2 rounded-md" type="email" placeholder="Enter Amount you want to Withdraw">
+            <button id="btn-withdraw" class=" bg-amber-400 m-2 rounded-lg px-6 py-2 font-medium hover:bg-green-400">Submit</button>
+   
+            </div>
+        </div>
+        </section>
+        <script src="deposite.js"></script>
+        <script src="withdraw.js"></script>
+        <script>
+         document.getElementById('btn-home').addEventListener('click', function(){
+        location.href = "index.html";})
+        </script>
+    </main>
+    
+</body>
+</html>
